@@ -1,0 +1,68 @@
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(kalenderbakgrunn.png);
+    background-size: cover;
+
+}
+.kalender{
+    width: 300px;
+    height: auto;
+    background:fff;
+    box-sizing: border-box; 
+
+}
+.kalender .bilde{
+    width: 100%;
+    height: 200px;
+    background: url(sunset.jpg);
+    background-size: cover;
+    padding: 20px;
+box-sizing: border-box;
+}
+.kalender .bilde h2, .kalender .bilde h3{
+    margin: 0;
+    padding: 0%;
+    color:fff;
+    text-shadow: 0 2px 2px rgb(0, 0,0,2)
+
+}
+.kalender .bilde h3{
+    font-weight: 500;
+}
+.kalender .dato {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25px,1fr));
+    box-sizing: border-box;
+    grid-gap: 10px;
+
+}
+.kalender .dato div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    color: 262626;
+}
+.kalender .dato div.dag{
+    font-weight: 700;
+}
+.kalender .dato div.dag:first-child, .kalender .dato div.nummer:nth-child(7n + 1)
+{
+        color: ff685d;
+        font-weight: 700;
+
+}
+.kalender .dato div.nummer.active
+{
+    background: #009688;
+    color:  #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
